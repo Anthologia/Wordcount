@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+        }
+
+        .container {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            background-color:wheat;
+
+            padding: 1rem 1rem;
+        }
+
+        .title {
+            color: brown;
+            text-align: center;
+        }
+
+        .submit_button {
+            border: 3px solid transparent;
+
+            background-color: black;
+            color: white;
+
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Word Count</h1>
+        <hr>
+
+        <form action="{%url 'result'%}" method="GET">
+            <textarea name="fulltext" id="" cols="150" rows="30" placeholder="단어 수를 세고 싶은 문장을 적어주세요!"></textarea>
+
+            <button type="submit" class="submit_button">COUNT!</button>
+        </form>
+
+        <p style="text-align: right;">
+            자세한 정보가 궁금하면
+            <a href="{%url 'about' %}">About</a>
+            으로!
+        </p>
+    </div>
+
+</body>
+
+</html>
